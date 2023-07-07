@@ -1,0 +1,123 @@
+:root {
+    --basecolor: #d97706;
+    --basecolor-high: #F59E0B;
+    --basecolor-low: #b66100;
+  }
+
+
+.class-head-contain{
+    width: 100%;
+    height: 200px;
+    border-radius: 20px;
+    position: relative;
+    background-color: var(--class-color);
+}
+.class-head{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../img/classroom.png);
+    opacity: .8;
+    mix-blend-mode: multiply;
+}
+.class-head-details{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+.class-name{
+    font-size: xx-large;
+}
+
+.assessment-container{
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    max-width: 70%;
+    min-width: 70%;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.assess-contain{
+    background-color: white;
+    box-shadow:0 2px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    padding: 20px;
+    border-top: 3px solid var(--class-color);
+    color: black;
+}
+#assessment-form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+.class-instruct-title{
+    font-size: larger;
+    color: var(--class-color);
+    font-weight: bolder;
+}
+.class-instruct-total{
+    font-size: large;
+    color: var(--class-color);
+    font-weight: bold;
+}
+.class-instruct img{
+    max-width: 300px;
+    margin: auto;
+    padding: 20px;
+}
+.title-total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+figcaption{
+    display: none;
+}
+
+
+/* CHOICES STYLES */
+.choices-list{
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.choice{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.choice-input{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    max-width: 300px;
+    background-color: whitesmoke;
+}
+.submit-answers{
+    background-color: var(--basecolor);
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+}
+.submit-answers:hover{
+    background-color: var(--basecolor-high);
+}
+.submit-answers:active{
+    background-color: var(--basecolor-low);
+}

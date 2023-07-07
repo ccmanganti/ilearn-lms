@@ -1,0 +1,432 @@
+:root {
+    --basecolor: #d97706;
+    --basecolor-high: #F59E0B;
+    --basecolor-low: #b66100;
+  }
+
+
+.class-head-contain{
+    width: 100%;
+    height: 200px;
+    border-radius: 20px;
+    position: relative;
+}
+.class-head{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../../img/classroom.png);
+    opacity: .8;
+    mix-blend-mode: multiply;
+}
+.class-head-details{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+.class-name{
+    font-size: xx-large;
+}
+
+.posts-container{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* POSTS */
+.mobile-nav{
+    margin: auto;
+    color: gray;
+    width: 75%;
+    text-align: start;
+    display: none;
+    gap: 20px;
+    align-items: center;
+    justify-content: start;
+    padding: 10px 0px;
+    font-weight: bolder;
+}
+.mob-nav.active{
+    color: black;
+    font-weight: bolder;
+}
+.no-post{
+    color: gray;
+    text-align: center;
+    font-size: large;
+    padding: 20px;
+}
+.post-nav{
+    background-color: white;
+    box-shadow:0 2px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    gap: 10px;
+}
+.post-navigations{
+    flex-basis: 25%;
+    align-self: start;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+
+.nav-post{
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 10px;
+    color: gray;
+    text-align: center;
+}
+.nav-post:hover{
+    color: darkgray;
+    background-color: rgb(227, 227, 227);
+}
+.nav-post:active{
+    color: darkgray;
+    background-color: whitesmoke;
+}
+.nav-post.active{
+    background-color: var(--basecolor);
+    color: white;
+}
+.nav-posts{
+    color: black;
+    font-size: larger;
+    font-weight: bold;
+}
+.nav-items{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.posts, .posts-only, .tasks-only, .assess-only{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    flex-basis: 45%;
+    color: black;
+}
+.posts-only, .tasks-only, .assess-only{
+    display: none;
+}
+.post{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow:0 2px 5px rgba(0, 0, 0, 0.15);
+    background-color: white;
+}
+.post-type{
+    font-weight: bold;
+}
+.post-title{
+    font-size: larger;
+    font-weight: bolder;
+}
+.post-details{
+    display: flex;
+    color: gray;
+    gap: 10px;
+}
+.post-desc{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+figcaption{
+    color: gray;
+    margin: 10px 0;
+    padding: 10px;
+    text-align: end;
+    border: 1px solid gray;
+    background-color: lightgray;
+}
+.post-descriptions{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    align-items: center;
+}
+.post-desc-contain{
+    padding: 0 20px;
+}
+.post-desc-profile {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+.post-desc-profile i{
+    color: white;
+    padding: 10px;
+    font-size: larger;
+}
+.post-state-overdue, .post-state-green{
+    font-size: small;
+    font-weight: bold;
+}
+.post-state-green{
+    color: green;
+}
+.post-state-overdue{
+    color: rgb(197, 0, 0);
+}
+.submit-task{
+    width: 100%;
+    color: white;
+    background-color: var(--basecolor);
+    border-radius: 20px;
+    padding: 10px;
+    text-align: center;
+}
+.submit-task:hover{
+    background-color: var(--basecolor-high);
+}
+.submit-task:active{
+    background-color: var(--basecolor-low);
+}
+
+.assigns-container{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* assigns */
+.mobile-nav{
+    margin: auto;
+    color: gray;
+    width: 75%;
+    text-align: start;
+    display: none;
+    gap: 20px;
+    align-items: center;
+    justify-content: start;
+    padding: 10px 0px;
+    font-weight: bolder;
+}
+.mob-nav.active{
+    color: black;
+    font-weight: bolder;
+}
+.no-assign{
+    color: gray;
+    text-align: center;
+    font-size: large;
+    padding: 20px;
+}
+.assign-nav{
+    flex-basis: 25%;
+    background-color: white;
+    box-shadow:0 2px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    align-self: start;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    gap: 10px;
+}
+
+.nav-assign{
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 10px;
+    color: gray;
+}
+.nav-assign:hover{
+    background-color: rgb(227, 227, 227);
+    color: darkgray;
+}
+.nav-assign:active{
+    color: darkgray;
+    background-color: whitesmoke;
+}
+.nav-assign.active{
+    background-color: var(--basecolor);
+    color: white;
+}
+.nav-assigns{
+    color: black;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.assignments{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: black;
+    width: 60%;
+    justify-content: start;
+}
+.assignment-container{
+    border-radius: 20px;
+    width: 100%;
+    justify-self: start;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.post-options{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-self: center;
+    justify-content: center;
+}
+.post-option{
+    border-radius: 20px;
+    padding: 10px 15px;
+}
+.post-option{
+    background-color: var(--basecolor);
+}
+.class-code{
+    padding: 20px;
+    display: flex;
+    gap: 50px;
+    background-color: white;
+    justify-content: space-between;
+    box-shadow:0 2px 5px rgba(0, 0, 0, 0.12);
+    border-radius: 20px;
+    align-items: center;
+}
+.class-details-submitted{
+    color: gray;
+}
+.task-date{
+    text-align: end;
+}
+.task-title{
+    font-size: large;
+    font-weight: bolder;
+}
+.task-class-details{
+    color: gray;
+    font-size: large;
+}
+.task-due{
+    font-weight: bold;
+}
+#all-assignments-content{
+    display: none;
+}
+#all-assigned-content{
+    display: none;
+}
+#all-overdue-content{
+    display: none;
+}
+#all-task-content{
+    display: none;
+}
+#all-assess-content{
+    display: none;
+}
+
+
+
+.assignment-container-submitted{
+    background-color: lightgray;
+    border-radius: 20px;
+    width: 100%;
+}
+#all-assignments-content.active, #all-assigned-content.active, #all-overdue-content.active, #all-task-content.active, #all-assess-content.active{
+    display: flex;
+}
+.no-post{
+    color: gray;
+    text-align: center;
+    font-size: large;
+    padding: 20px;
+}
+
+@media (max-width: 900px) {
+    .assignments{
+        width: 100%;
+        
+    }
+    .posts-container{
+        flex-direction: column;
+    }
+    .posts{
+        flex-basis: 50%;
+    }
+    .mobile-nav{
+        display: flex;
+        width: 100%;
+        padding: 10px;
+    }
+    .post-nav{
+        display: none;
+    }
+    .post-navigations{
+        width: 100%;
+    }
+    .class-tools-nav{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
+    .nav-items{
+        gap: 10px;
+        font-size: small;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .assigns-container{
+        flex-direction: column;
+    }
+    .assigns{
+        flex-basis: 60%;
+    }
+    .mobile-nav{
+        display: flex;
+        width: 100%;
+        padding: 10px;
+    }
+    .assign-nav{
+        display: none;
+    }
+}
+  
+  /* Media query for mobile layout */
+  @media (max-width: 600px) {
+    .posts{
+        flex-basis: 80%;
+    }
+    .assigns{
+        flex-basis: 80%;
+    }
+    .mobile-nav{
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: repeat(3, 1fr);
+        font-size: medium;
+    }
+}

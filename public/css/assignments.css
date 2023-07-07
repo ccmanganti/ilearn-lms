@@ -1,0 +1,197 @@
+:root {
+    --basecolor: #d97706;
+    --basecolor-high: #F59E0B;
+    --basecolor-low: #b66100;
+  }
+
+
+.class-head-contain{
+    width: 100%;
+    height: 200px;
+    border-radius: 20px;
+    position: relative;
+    background-color: var(--basecolor-low);
+}
+.class-head{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../img/classroom.png);
+    opacity: .8;
+    mix-blend-mode: multiply;
+}
+.class-head-details{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+.class-name{
+    font-size: xx-large;
+}
+
+.assigns-container{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* assigns */
+.mobile-nav{
+    margin: auto;
+    color: gray;
+    width: 75%;
+    text-align: start;
+    display: none;
+    gap: 20px;
+    align-items: center;
+    justify-content: start;
+    padding: 10px 0px;
+    font-weight: bolder;
+}
+.mob-nav.active{
+    color: black;
+    font-weight: bolder;
+}
+.no-assign{
+    color: gray;
+    text-align: center;
+    font-size: large;
+    padding: 20px;
+}
+.assign-nav{
+    flex-basis: 25%;
+    background-color: white;
+    box-shadow:0 2px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    align-self: start;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    gap: 10px;
+}
+
+.nav-assign{
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 10px;
+    color: gray;
+}
+.nav-assign:hover{
+    background-color: rgb(227, 227, 227);
+    color: darkgray;
+}
+.nav-assign:active{
+    color: darkgray;
+    background-color: whitesmoke;
+}
+.nav-assign.active{
+    background-color: var(--basecolor);
+    color: white;
+}
+.nav-assigns{
+    color: black;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.assignments{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-basis: 60%;
+    color: black;
+    justify-content: start;
+}
+.assignment-container{
+    background-color: white;
+    border-radius: 20px;
+    width: 100%;
+}
+
+.class-code{
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    box-shadow:0 2px 5px rgba(0, 0, 0, 0.12);
+    border-radius: 20px;
+}
+.class-details-submitted{
+    color: gray;
+}
+.task-date{
+    text-align: end;
+}
+.task-title{
+    font-size: large;
+    font-weight: bolder;
+}
+.task-class-details{
+    color: gray;
+    font-size: large;
+}
+.task-due{
+    font-weight: bold;
+}
+#all-assignments{
+    display: none;
+}
+#assignments-overdue{
+    display: none;
+}
+#assignments-submitted{
+    display: none;
+}
+.assignment-container-submitted{
+    background-color: lightgray;
+    border-radius: 20px;
+    width: 100%;
+}
+#all-assignments.active, #assignments-overdue.active, #assignments-submitted.active{
+    display: flex;
+}
+.no-post{
+    color: gray;
+    text-align: center;
+    font-size: large;
+    padding: 20px;
+}
+
+@media (max-width: 900px) {
+    .assigns-container{
+        flex-direction: column;
+    }
+    .assigns{
+        flex-basis: 60%;
+    }
+    .mobile-nav{
+        display: flex;
+        width: 100%;
+        padding: 10px;
+    }
+    .assign-nav{
+        display: none;
+    }
+    .task-title, .task-class-details, .task-due, .task-state{
+        font-size: small;
+    }
+  }
+  
+  /* Media query for mobile layout */
+  @media (max-width: 600px) {
+    .assigns{
+        flex-basis: 80%;
+    }
+}

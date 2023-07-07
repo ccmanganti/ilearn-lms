@@ -1,0 +1,253 @@
+:root {
+    --basecolor: #d97706;
+    --basecolor-high: #F59E0B;
+    --basecolor-low: #b66100;
+  }
+
+
+.class-head-contain{
+    width: 100%;
+    height: 200px;
+    border-radius: 20px;
+    position: relative;
+    background-color: var(--class-color);
+}
+.class-head{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../img/classroom.png);
+    opacity: .8;
+    mix-blend-mode: multiply;
+}
+.class-head-details{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+.class-name{
+    font-size: xx-large;
+}
+
+.student-list-title{
+    font-size: large;
+    font-weight: bolder;
+    padding: 20px 0;
+}
+
+.container{
+    display: flex;
+    gap: 40px;
+}
+.students-list{
+    width: 40%;
+    
+}
+.student-container{
+    width: 100%;
+    max-height: 500px;
+    overflow-y: scroll;
+    overflow-x: auto;
+    display: flex;
+    padding: 10px 0;
+    flex-direction: column;
+    gap: 10px;
+}
+.username{
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow:0 2px 5px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    transition: all .3s;
+    cursor: pointer;
+    text-align: start;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.username:hover{
+    background-color: var(--class-color);
+    color: white;
+}
+.username:active{
+    background-color: white;
+    color: var(--class-color);
+}
+.username.active{
+    background-color: var(--class-color);
+    color: white;
+    font-weight: bolder;
+    padding: 30px;
+}
+.view-ass{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+
+}
+.submission-view{
+    height: 200px;
+    max-height: 200px;
+    overflow-y: scroll;
+    background-color: lightgray;
+    color: gray;
+    border-radius: 20px;
+    margin: 0 0 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px 0;
+}
+
+
+.task-container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+}
+.task-details{
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.task-submission{
+    flex-basis: 40%;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    max-width: 40%;
+}
+.task-header{
+    font-weight: bolder;
+}
+.class-task-created{
+    color: gray;
+}
+.class-task-title{
+    font-size: x-large;
+    color: var(--basecolor);
+}
+.task-description{
+    border-top: 2px solid gray;
+    margin: 10px 0;
+
+}
+.task-description img{
+    max-width: 300px;
+    margin: 10px 0;
+    display: none;
+}
+.task-desc{
+    padding: 10px;
+}
+figcaption{
+    background-color: lightgray;
+    width: 100%;
+    padding: 20px;    
+    margin: 10px 0;
+    color: gray;
+}
+
+
+.submitted-files{
+    background-color: white;
+    border-radius: 2px solid darkgray;
+    padding: 10px;
+    text-align: center;
+    width: 70%;
+    transition: all .3s;
+}
+.submitted-files:hover{
+    background-color: var(--class-color);
+    color: white;
+}
+.submitscore-form{
+    display: none;
+    gap: 10px;
+    justify-content: end;
+}
+.submitScore {
+    background-color: var(--class-color);
+    color: white;
+    border-radius: 20px;
+    padding: 10px 20px;
+    box-shadow:0 2px 5px rgba(0, 0, 0, 0.15);
+
+}
+.submitScore:hover{
+    background-color: white;
+    color: var(--class-color);
+}
+#scoreInput{
+    border-radius: 20px;
+    padding: 10px;
+    width: 50%;
+    color: black;
+}
+
+.submitscore-form.active{
+    display: flex;
+}
+.formsper-stud{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+button:disabled {
+    /* CSS properties for disabled button */
+    cursor: not-allowed;
+    background-color: lightgray;
+    color: gray;
+}
+button:disabled:hover {
+    /* CSS properties for disabled button */
+    cursor: not-allowed;
+    background-color: lightgray;
+    color: gray;
+}
+input:disabled {
+    /* CSS properties for disabled button */
+    cursor: not-allowed;
+    background-color: lightgray;
+    border: 1px solid white;
+}
+
+@media (max-width: 900px) {
+    .container{
+        flex-direction: column;
+    }
+    .students-list, .view-ass{
+        width: 100%;
+    }
+    .student-container{
+        background-color: lightgray;
+        border-radius: 20px;
+        max-height: 200px;
+        padding: 20px;
+    }
+    #scoreInput{
+        width: 100%;
+    }
+  }
+  
+  /* Media query for mobile layout */
+  @media (max-width: 600px) {
+    
+}

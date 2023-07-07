@@ -1,0 +1,167 @@
+:root {
+    --basecolor: #d97706;
+    --basecolor-high: #F59E0B;
+    --basecolor-low: #b66100;
+  }
+
+
+.class-head-contain{
+    width: 100%;
+    height: 200px;
+    border-radius: 20px;
+    position: relative;
+    background-color: var(--class-color);
+}
+.class-head{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../img/classroom.png);
+    opacity: .8;
+    mix-blend-mode: multiply;
+}
+.class-head-details{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+.class-name{
+    font-size: xx-large;
+}
+
+
+.task-container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+}
+.task-details{
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.task-submission{
+    flex-basis: 40%;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    max-width: 40%;
+}
+.task-header{
+    font-weight: bolder;
+}
+.class-task-created{
+    color: gray;
+}
+.class-task-title{
+    font-size: x-large;
+    color: var(--basecolor);
+}
+.task-description{
+    border-top: 2px solid gray;
+    margin: 10px 0;
+
+}
+.task-description img{
+    max-width: 300px;
+    margin: 10px 0;
+    display: none;
+}
+.task-desc{
+    padding: 10px;
+}
+figcaption{
+    background-color: lightgray;
+    width: 100%;
+    padding: 20px;    
+    margin: 10px 0;
+    color: gray;
+}
+.submission-title{
+    font-size: larger;
+    font-weight: bolder;
+}
+.task-due{
+    font-weight: bolder;
+    color: gray;
+}
+.submission-form{
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 20px;
+    padding: 30px;
+}
+.submit-btn{
+    background-color: var(--basecolor);
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+}
+.submit-btn:hover{
+    background-color: var(--basecolor-high);
+}
+.submit-btn:active{
+    background-color: var(--basecolor-low);
+}
+.submitted-files{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.submission-description{
+    color: var(--basecolor);
+    padding: 10px 0;
+}
+.submitted-title{
+    color: var(--basecolor);
+    font-weight: bolder;
+}
+.files-submitted{
+    background-color: lightgray;
+    color: gray;
+    padding: 10px;
+    width: 100%;
+    white-space: nowrap; /* Prevent line wrapping */
+    overflow: hidden; /* Hide any overflowing text */
+    text-overflow: ellipsis; /* Add ellipsis (...) for overflow */
+
+
+}
+.files-submitted:hover{
+    background-color: white;
+    color: gray;
+}
+.submission-form{
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    .task-container{
+        flex-direction: column;
+        gap: 50px;
+    }
+    .task-submission{
+        max-width: 100%;
+    }
+}
+  
+/* Media query for mobile layout */
+@media (max-width: 600px) {
+    
+}
