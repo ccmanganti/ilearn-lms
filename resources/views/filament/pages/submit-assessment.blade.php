@@ -78,7 +78,8 @@
                 </div>
                 <h2 class="class-instruct" target=”_blank”>{!! $currentAssess->desc !!}</h2>
             </div>
-            <form action="/submitassess" id="assessment-form" method="POST">
+            <form action="/submitassess" id="assessment-form" method="POST" enctype="multipart/form-data">
+                @csrf
                 <input id="userid-in" type="hidden" name="userid" readonly value="{{ auth()->user()->id }}">
                 <input id="classid-in" type="hidden" name="classid" readonly value="{{ $currentClass->id }}">
                 <input id="classcode-in" type="hidden" name="classcode" readonly value="{{ $currentClass->code }}">
@@ -100,7 +101,7 @@
                                     @php $choiceNum++; @endphp
                                 @endforeach                            
                             @else
-                                <input class="choice-input" type="text" placeholder="Answer" name="{{ $itemNum }}" id="{{ $itemNum.$choiceNum }}" required/>
+                                <input class="choice-input" type="text" placeholder="Answer" name="{{ $itemNum }}" id="{{ $itemNum }}" required/>
                             @endif
 
                         </div>

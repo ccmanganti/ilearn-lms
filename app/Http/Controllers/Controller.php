@@ -79,6 +79,7 @@ class Controller extends BaseController
         $newScore->classcode = request('classcode');
         $newScore->classname = Classes::where('code', request('classcode'))->first()->name;
         $newScore->classprof = Classes::where('code', request('classcode'))->first()->prof;
+        $newScore->classprofid = 1;
         $newScore->asstype = "Assessment";
         $newScore->assid = request('assessid');
         $newScore->assname = Assessment::where('id', request('assessid'))->first()->title;
@@ -87,7 +88,9 @@ class Controller extends BaseController
         $newScore->save();
 
 
-        return response()->json(array("success" => "1"));
+        return redirect('/lms/assignments')->with('success', '1');
+
+        // return response()->json(array("success" => "1"));
     }
 
     function submitUnenroll(){
