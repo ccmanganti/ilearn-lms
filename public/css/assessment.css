@@ -55,7 +55,6 @@
     box-shadow:0 2px 5px rgba(0, 0, 0, 0.15);
     border-radius: 20px;
     padding: 20px;
-    width: 100%;
     border-top: 3px solid var(--class-color);
     color: black;
 }
